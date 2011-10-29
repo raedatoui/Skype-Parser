@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+config/database.yml
+public/stylesheets/compiled/*
+public/system/**/*
+public/assets/*
+.DS_Store
+.project
+active_admin.css
+public/coffeescripts/*
+solr/data/*
