@@ -1,0 +1,56 @@
+= javascript_include_tag "http://swfobject.googlecode.com/svn/trunk/swfobject/swfobject.js"
+= javascript_include_tag "message"
+= stylesheet_link_tag    "message"
+
+/= paginate @messages
+
+/ - @authors.each do |k,v|
+/    %div
+/       = k
+/       = v
+/ %br
+/ %div= "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+/ %br
+/ - @hosts.each do |k,v|
+/    %div
+/       = k
+/       = v
+
+%div#playerContainer
+   %object#player
+   %div#info
+      %h2#vtitle
+
+%div#gridContainer
+   
+   %h1 Youtube
+   %div.grid
+      - @youtubes.each do |vid|
+         %div.vbrick.youtube{:rel => vid}
+            = image_tag "http://img.youtube.com/vi/" + vid + "/3.jpg"
+
+   %br
+   %br
+   %h1 Tumblr
+   %div.grid
+      - @tumblrs.each do |img|
+         %div.vbrick.tumblr
+            = image_tag img["t"]
+
+   %br
+   %br
+   %h1 Vimeo
+   %div.grid
+      - @vimeos.each do |img|
+         %div.vbrick.tumblr
+            - if img[0]
+               = image_tag img[0]["thumbnail_small"]
+
+
+   %br
+   %br
+   %h1 IMGUR
+   %div.grid
+      - @images.each do |img|
+         %div.vbrick.tumblr
+            = image_tag img["t"]

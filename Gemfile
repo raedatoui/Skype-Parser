@@ -53,3 +53,5 @@ gem "capistrano_colors"
 gem "open_gem", :group => :development
 gem "sunspot"
 gem "sunspot_rails"
+
+gem 'kaminari'

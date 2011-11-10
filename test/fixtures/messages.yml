@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  author: MyString
+  from_dispname: MyString
+  body_xml: MyString
+  timestamp: 1
+  convo_id: 1
+
+two:
+  author: MyString
+  from_dispname: MyString
+  body_xml: MyString
+  timestamp: 1
+  convo_id: 1

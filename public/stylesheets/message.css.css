@@ -1,0 +1,53 @@
+/* line 10, ../../app/assets/stylesheets/message.css.scss */
+#gridContainer {
+  margin-top: 400px;
+}
+
+/* line 13, ../../app/assets/stylesheets/message.css.scss */
+#info {
+  float: left;
+  left: 700px;
+}
+
+/* line 18, ../../app/assets/stylesheets/message.css.scss */
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+/* line 25, ../../app/assets/stylesheets/message.css.scss */
+.masonry {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 32, ../../app/assets/stylesheets/message.css.scss */
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
+}
+
+/* line 38, ../../app/assets/stylesheets/message.css.scss */
+.vbrick {
+  border: 1px solid #666;
+}
+/* line 40, ../../app/assets/stylesheets/message.css.scss */
+.vbrick img {
+  width: 120px;
+  height: 90px;
+}
+
+/* line 45, ../../app/assets/stylesheets/message.css.scss */
+.selected {
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
