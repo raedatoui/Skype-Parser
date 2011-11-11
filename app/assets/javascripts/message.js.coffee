@@ -15,4 +15,8 @@ $ ->
 			$('html,body').animate({scrollTop:0},1000)
 	
 	$(".tumblr").click ->
-		
+		vid =  $(this).attr("rel")
+		obj = vimeos[vid]
+		$('<iframe src="http://player.vimeo.com/video/'+vid+'?title=0&amp;byline=0&amp;portrait=0"' +
+		 'width="'+ obj["width"] + '" height="' + obj["width"] +  '" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>').appendTo("#playerContainer")
+		$('html,body').animate({scrollTop:0},1000)

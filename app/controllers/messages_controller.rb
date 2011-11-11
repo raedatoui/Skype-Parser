@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
     @hosts = Hash.new
     
     @youtubes = Array.new
-    @vimeos = Array.new
+    @vimeos = Hash.new
     @tumblrs = Array.new
     @images = Array.new
     
@@ -57,7 +57,12 @@ class MessagesController < ApplicationController
           if domain == "vimeo.com"
             vid = l.split(".com/")[1]
             if vid.to_i.to_s == vid.to_s
-              @vimeos.push(JSON.parse(open("http://vimeo.com/api/v2/video/"+vid.to_s+".json").read))
+              obj = JSON.parse(open("http://vimeo.com/api/v2/video/"+vid.to_s+".json").read)
+              if obj[0]
+                @vimeos[obj[0]["id"]] = {"thumb" => obj[0]["thumbnail_small"], "width" => obj[0]["width"], "height" => obj[0]["height"]}
+              else
+                puts obj.to_s
+              end
             end    
           end
           
